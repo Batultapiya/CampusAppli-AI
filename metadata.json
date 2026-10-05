@@ -1,0 +1,6 @@
+{
+  "name": "College Application Generator",
+  "description": "Generate formal, properly formatted college applications in seconds with smart templates and AI personalization for students and faculty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

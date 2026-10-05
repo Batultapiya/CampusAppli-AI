@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Document Paper Styles */
+.font-document-serif {
+  font-family: 'EB Garamond', 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+.font-document-sans {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.document-page-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+              0 10px 15px -3px rgba(0, 0, 0, 0.08),
+              0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Print styles specifically for official paper */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-application-document,
+  #printable-application-document * {
+    visibility: visible;
+  }
+  #printable-application-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20mm;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
